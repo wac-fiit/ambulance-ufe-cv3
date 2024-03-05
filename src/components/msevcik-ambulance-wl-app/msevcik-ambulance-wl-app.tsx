@@ -14,6 +14,8 @@ export class MsevcikAmbulanceWlApp {
   @State() private relativePath = "";
 
   @Prop() basePath: string="";
+  @Prop() apiBase: string;
+  @Prop() ambulanceId: string;
 
   componentWillLoad() {
     const baseUri = new URL(this.basePath, document.baseURI || "/").pathname;
@@ -56,7 +58,7 @@ export class MsevcikAmbulanceWlApp {
         ? <msevcik-ambulance-wl-editor entry-id={entryId}
             oneditor-closed={ () => navigate("./list")} >
           </msevcik-ambulance-wl-editor>
-        : <msevcik-ambulance-wl-list
+        : <msevcik-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
           onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) }></msevcik-ambulance-wl-list>
         }
   
