@@ -12,6 +12,8 @@ export namespace Components {
         "basePath": string;
     }
     interface MsevcikAmbulanceWlEditor {
+        "ambulanceId": string;
+        "apiBase": string;
         "entryId": string;
     }
     interface MsevcikAmbulanceWlList {
@@ -81,6 +83,8 @@ declare namespace LocalJSX {
         "basePath"?: string;
     }
     interface MsevcikAmbulanceWlEditor {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "entryId"?: string;
         "onEditor-closed"?: (event: MsevcikAmbulanceWlEditorCustomEvent<string>) => void;
     }
