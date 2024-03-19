@@ -38,6 +38,8 @@ export class MsevcikAmbulanceWlApp {
   }
 
   render() {
+    console.debug("msevcik-ambulance-wl-app.render() - path: %s", this.relativePath);
+
     let element = "list"
     let entryId = "@new"
   
